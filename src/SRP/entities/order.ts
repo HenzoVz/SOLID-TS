@@ -1,10 +1,10 @@
-import { OrderStatus } from '../entities/interfaces/order-status';
+import { OrderStatus } from '../interfaces/order-status';
 import { Messaging } from '../services/messaging';
 import { Persistency } from '../services/persistency';
 import { Library } from './manager-books';
 
 export class Order {
-  private _orderStatus: OrderStatus = 'open';
+  private _orderStatus: OrderStatus = { status: 'open' };
   private readonly library: Library;
   private readonly messaging: Messaging;
   private readonly persistency: Persistency;
@@ -28,7 +28,7 @@ export class Order {
       console.log('Seu carrinho está vázio');
       return;
     }
-    this._orderStatus = 'closed';
+    this._orderStatus.status = 'closed';
     this.messaging.sendMessage(
       `Seu pedido com total de ${this.library.total()} foi recebido`,
     );

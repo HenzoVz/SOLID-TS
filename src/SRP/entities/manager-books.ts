@@ -1,4 +1,4 @@
-import { BasketBooks } from './interfaces/basket-books';
+import { BasketBooks } from '../interfaces/basket-books';
 
 export class Library {
   private readonly _books: BasketBooks[] = [];

@@ -1,4 +1,4 @@
-import { BasketBooks } from '../entities/interfaces/basket-books';
+import { BasketBooks } from '../interfaces/basket-books';
 
 export class Product implements BasketBooks {
   public title: string;
