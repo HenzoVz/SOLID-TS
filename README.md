@@ -20,11 +20,11 @@ Estudo sobre principios S.O.L.I.D em Typescript
 
 ### Interface Segregation Principle (Princípio de segregação de interface)
 
-- Clientes não devem ser forçados a depender de métodos que não usam. Ou seja, Múltiplas interfaces específicas são melhores do que uma interface com múltiplas definições.
+- Clientes não devem ser forçados a depender de métodos que não usam. Ou seja, múltiplas interfaces específicas são melhores do que uma interface com múltiplas definições.
 
-### Dependency Inversion Principle
-- Classes de alto nível não deveriam depender de classesde baixo nível. Ambas devem depender de abstrações. As abstrações não devem depender de detalhes. Detalhes
-devem depender de abstrações.
+### Dependency Inversion Principle (Princípio da inversão de dependência)
+- Classes de alto nível não deveriam depender de classes de baixo nível. Ambas devem depender de abstrações. As abstrações não devem depender de detalhes. Detalhes
+devem depender de abstrações. Em suma teremos que criar abstrações que desacoplam as duas classes, dessa forma respeitando também o princípio do aberto fechado.
 
 * **Classes de baixo nível** implementam operações básicas tais como trabalhar com um disco, transferindo dados pela rede, conectar-se a uma base de dados, etc.
 * **Classes de alto nível** contém lógica de negócio complexa que direcionam classes de baixo nível para fazerem algo.
